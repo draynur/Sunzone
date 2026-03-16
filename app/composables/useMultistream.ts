@@ -1,23 +1,23 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
-// export const CHANNELS = [
-//   'cstro34',
-//   'bradyschroeder7',
-//   'bigdinoboi76',
-//   'tpeek5',
-//   'itzeimer22',
-//   'loveland4president',
-//   'draynur'
-// ]
-
-// TEST
 export const CHANNELS = [
-  'supertf',
-  'hasanabi',
-  'shroud',
-  'chess',
-  'emongg',
+  'cstro34',
+  'bradyschroeder7',
+  'bigdinoboi76',
+  'tpeek5',
+  'itzeimer22',
+  'loveland4president',
+  'draynur'
 ]
+
+// // TEST
+// export const CHANNELS = [
+//   'supertf',
+//   'hasanabi',
+//   'shroud',
+//   'chess',
+//   'emongg',
+// ]
 
 export type ChannelStatus = {
   isLive: boolean
