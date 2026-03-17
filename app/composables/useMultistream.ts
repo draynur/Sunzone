@@ -85,6 +85,7 @@ export function useMultistream() {
     statuses.value = { ...statuses.value, ...newStatuses }
 
     if (isInitial) {
+      visibleChannels.value = liveChannels
       if (liveChannels.length > 0) {
         featured.value = liveChannels[0]
       }

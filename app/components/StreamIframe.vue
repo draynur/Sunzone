@@ -32,7 +32,7 @@ function loadTwitchSDK(): Promise<void> {
     if (script) { script.addEventListener('load', () => resolve(), { once: true }); return }
     script = document.createElement('script')
     script.id = 'twitch-embed-sdk'
-    script.src = 'https://embed.twitch.tv/embed/v1.js'
+    script.src = 'https://player.twitch.tv/js/embed/v1.js'
     script.onload = () => resolve()
     document.head.appendChild(script)
   })
@@ -51,8 +51,8 @@ onMounted(async () => {
   ].filter(Boolean)
 
   const embed = new window.Twitch.Embed(containerId, {
-    width: '100%',
-    height: '100%',
+    width: 620,
+    height: 378,
     channel: props.channel,
     parent: parents,
     muted: true,
