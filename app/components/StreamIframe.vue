@@ -48,6 +48,7 @@ onMounted(async () => {
     'ai.studio',
     'build.ai.studio',
     'localhost',
+    'sunzone.jrunyard3ft.workers.dev',
   ].filter(Boolean)
 
   const embed = new window.Twitch.Embed(containerId, {
