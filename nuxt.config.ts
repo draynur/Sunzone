@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   ssr: false,
+  modules: ['@vite-pwa/nuxt'],
   css: ['~/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
@@ -19,6 +20,32 @@ export default defineNuxtConfig({
     head: {
       title: 'Twitch Multistream',
       htmlAttrs: { lang: 'en' },
+    },
+  },
+  pwa: {
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'Twitch Multistream',
+      short_name: 'Multistream',
+      description: 'Watch multiple Twitch streams at once',
+      theme_color: '#9147ff',
+      background_color: '#0e0e10',
+      display: 'fullscreen',
+      orientation: 'landscape',
+      icons: [
+        {
+          src: '/favicon.ico',
+          sizes: '48x48',
+          type: 'image/x-icon',
+        },
+      ],
+    },
+    workbox: {
+      navigateFallback: '/',
+    },
+    devOptions: {
+      enabled: true,
+      type: 'module',
     },
   },
 })
