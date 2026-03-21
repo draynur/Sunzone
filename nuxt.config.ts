@@ -25,8 +25,8 @@ export default defineNuxtConfig({
   pwa: {
     registerType: 'autoUpdate',
     manifest: {
-      name: 'Twitch Multistream',
-      short_name: 'Multistream',
+      name: 'Sunzone',
+      short_name: 'Sunzone',
       description: 'Watch multiple Twitch streams at once',
       theme_color: '#9147ff',
       background_color: '#0e0e10',

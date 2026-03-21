@@ -65,7 +65,7 @@ const gridClass = computed(() => {
   <div v-else class="w-screen h-screen bg-neutral-950 overflow-hidden relative font-sans text-white">
 
     <!-- Toolbar -->
-    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 z-50">
+    <div class="absolute bottom-6 right-6 flex flex-col items-center gap-4 z-50">
 
       <!-- Checklist Popover -->
       <Transition name="popover">
@@ -100,15 +100,7 @@ const gridClass = computed(() => {
         </div>
       </Transition>
 
-      <div class="bg-neutral-900/80 backdrop-blur-xl border border-white/10 p-1.5 rounded-2xl flex gap-1 shadow-2xl">
-        <button
-          @click="mode = 'grid'"
-          :class="['p-3 rounded-xl transition-all flex items-center gap-2', mode === 'grid' ? 'bg-white/10 text-white shadow-inner' : 'text-white/50 hover:text-white hover:bg-white/5']"
-        >
-          <LayoutGrid class="w-5 h-5" />
-          <span class="text-sm font-medium hidden md:block">Grid</span>
-        </button>
-        <div class="w-px bg-white/10 my-2 mx-1"></div>
+      <div class="bg-neutral-900/80 backdrop-blur-xl border border-white/10 p-1.5 rounded-2xl flex gap-1 shadow-2xl ml-auto">
         <button
           @click="showChecklist = !showChecklist"
           :class="['p-3 rounded-xl transition-all flex items-center gap-2', showChecklist ? 'bg-white/10 text-white shadow-inner' : 'text-white/50 hover:text-white hover:bg-white/5']"
