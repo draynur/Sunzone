@@ -1,5 +1,0 @@
-{
-  "name": "Twitch Multistream",
-  "description": "A fullscreen grid displaying multiple Twitch streams simultaneously.",
-  "requestFramePermissions": []
-}
